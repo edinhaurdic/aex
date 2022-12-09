@@ -1,6 +1,6 @@
 import { useState } from "react";
 import React from "react";
-import { StyleSheet, View } from "react-native";
+import { StyleSheet, View, TextInput } from "react-native";
 
 export default function LoginScreen(){
 
@@ -8,7 +8,7 @@ export default function LoginScreen(){
     const [password, setPassword] = useState('')
 
     return (
-        <View>
+        <View style={styles.loginview}>
             <View style={styles.inputView}>
             <TextInput
             style={styles.TextInput}
@@ -34,8 +34,13 @@ export default function LoginScreen(){
 }
 
 const styles = StyleSheet.create({
+    loginview: {
+        flex: 1,
+        alignItems: 'center',
+        justifyContent: 'center',
+    },
     inputView: {
-        backgroundColor: "#FFC0CB",
+        backgroundColor: "#1e90ff",
         borderRadius: 30,
         width: "70%",
         height: 45,
