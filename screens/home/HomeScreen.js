@@ -1,8 +1,13 @@
+import React from 'react';
 import { useNavigation } from '@react-navigation/native';
 import { StyleSheet, Text, View, ImageBackground, Dimensions } from 'react-native';
 import { TouchableOpacity } from 'react-native-gesture-handler';
+import { Button, Paragraph, Menu, Divider, Provider } from 'react-native-paper';
 
-export default function HomeScreen() {
+
+export default function HomeScreen (){
+
+
 
   const nav = useNavigation()
 
@@ -10,9 +15,11 @@ export default function HomeScreen() {
       <View>
 
       <TouchableOpacity style={styles.loginlink}>
-      <Text  onPress={() => nav.navigate('loginscreen')}>Login</Text>
-      <Text>Registrera mig</Text>
+      <Text  onPress={() => nav.navigate('loginscreen')}>Logga in</Text>
+      <Text>Registrering</Text>
       <Text>Boka tid</Text>
+      <Text>Mina sidor</Text>
+
       </TouchableOpacity>
       <ImageBackground 
       source={require('/Users/Momo/aex/aex/screens/home/cleaning.jpg')}
@@ -59,11 +66,12 @@ const styles = StyleSheet.create({
   loginlink:{
     alignItems: 'center',
     flexDirection: 'row',
-    justifyContent: 'space-evenly',
+    justifyContent: 'space-around',
     borderBottomWidth: 1,
     borderColor : '#00008b',
     borderRadius: 5,
     paddingTop: 25,
+    paddingBottom: 10,
     width: '100%',
   },
     imagebackground:{
